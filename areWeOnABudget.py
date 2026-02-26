@@ -2,6 +2,7 @@ import sys
 import math
 
 cases = int(input())
+listDiff = []
 for x in range(cases):
     numItems = int(input()) 
     strBudget = input().split(" ")
@@ -12,4 +13,6 @@ for x in range(cases):
     for i in range(numItems):
         totalDiff += fActual[i] - fBudget[i]
     roundDiff = round(totalDiff/numItems, 2)
-    print(f"{roundDiff:.2f}")    
+    listDiff.append(f"{roundDiff:.2f}")    
+for m in range(len(listDiff)):
+    print(listDiff[m])
