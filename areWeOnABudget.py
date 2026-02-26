@@ -10,6 +10,6 @@ for x in range(cases):
     fActual = list(map(float, strActual))
     totalDiff = 0.00
     for i in range(numItems):
-        totalDiff += round(fActual[i] - fBudget[i], 2)  
+        totalDiff += fActual[i] - fBudget[i]
     roundDiff = round(totalDiff/numItems, 2)
     print(f"{roundDiff:.2f}")    
