@@ -8,8 +8,7 @@ for z in range(cases):
     letters =  ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     for i in range(sentences):
         sentence = input()
-        line = "".join(e for e in sentence if e.isalnum())
-        line = "".join(e for e in line if not e.isdigit())
+        line = "".join(e for e in sentence if e.isalpha())
         line = line.upper()
         line = [char for char in line]
         allchar+=line
