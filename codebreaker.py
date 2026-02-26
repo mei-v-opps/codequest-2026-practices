@@ -20,5 +20,5 @@ for z in range(cases):
                 count+=1
         count = (count/len(allchar))*100
         count = round(count, 2)
-        print(letters[m], ": ", f"{count:.2f}%")        
+        print(f"{letters[m]}: {count:.2f}%")        
         
