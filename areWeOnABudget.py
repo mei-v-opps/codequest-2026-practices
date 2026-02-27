@@ -2,9 +2,9 @@ import sys
 import math
 # ...
 
-def round_half_up(n, decimals=0):
-    multiplier = 10**decimals
-    return math.floor(n * multiplier + 0.5) / multiplier
+def round_half_up(num, dec):
+    mult = 10 ** dec
+    return math.floor(num * mult + 0.5) / mult
 
 cases = int(input())
 for x in range(cases):
@@ -19,7 +19,6 @@ for x in range(cases):
     for i in range(numItems):
         totalBudget += fBudget[i]
         totalActual += fActual[i]
-        # totalDiff += fActual[i] - fBudget[i]
     totalDiff = totalActual - totalBudget
     roundDiff = round_half_up(totalDiff/numItems, 2)
     print(f"{roundDiff:.2f}")    
