@@ -7,6 +7,7 @@ def round_half_up(num, dec):
     return math.floor(num * mult + 0.5) / mult
 
 cases = int(input())
+ans = []
 for x in range(cases):
     numItems = int(input()) 
     strBudget = input().split(" ")
@@ -20,5 +21,6 @@ for x in range(cases):
         totalBudget += fBudget[i]
         totalActual += fActual[i]
     totalDiff = totalActual - totalBudget
-    roundDiff = round_half_up(totalDiff/numItems, 2)
-    print(f"{roundDiff:.2f}")    
+    roundDiff = ans.append(round_half_up(totalDiff/numItems, 2))
+for i in range(len(ans)):
+    print(f"{ans[i]:.2f}")    
