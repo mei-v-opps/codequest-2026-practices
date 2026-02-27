@@ -9,7 +9,7 @@ for z in range(cases):
     info = []
     sentences = []
     for i in range(D):
-        line = input().split(": ")
+        line = input().split(": ", maxsplit = 1)
         positions.append(line[0])
         info.append(line[1])
     for i in range(T):
